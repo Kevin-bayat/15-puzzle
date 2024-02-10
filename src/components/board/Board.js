@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import './Board.css'
 import Tile from "../tile/Tile"
 import Overlay from "../overlay/Overlay"
+import Winner from "../winner/Winner";
+import NewGame from "../newGame/NewGame";
 
 
 const Board = () => {
@@ -63,8 +65,8 @@ const Board = () => {
                 return <Tile key={i} number={x} moveTile={moveTile}/>
             })}
         </div>
-        {/*<Winner numbers={numbers} reset={reset}/>*/}
-        {/*<NewGame reset={reset} />*/}
+        <Winner numbers={numbers} reset={reset}/>
+        <NewGame reset={reset} />
     </div>
 }
 
